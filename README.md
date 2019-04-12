@@ -1,6 +1,6 @@
-# Deep Text Corrector
+# Text Corrector Software
 
-Deep Text Corrector uses [TensorFlow](https://www.tensorflow.org/) to train sequence-to-sequence models that are capable of automatically correcting small grammatical errors in conversational written English (e.g. SMS messages). 
+Text Corrector Software uses [TensorFlow](https://www.tensorflow.org/) to train sequence-to-sequence models that are capable of automatically correcting small grammatical errors in conversational written English (e.g. SMS messages). 
 It does this by taking English text samples that are known to be mostly grammatically correct and randomly introducing a handful of small grammatical errors (e.g. removing articles) to each sentence to produce input-output pairs (where the output is the original sample), which are then used to train a sequence-to-sequence model.
 
 See [this blog post](http://atpaino.com/2017/01/03/deep-text-correcter.html) for a more thorough write-up of this work.
