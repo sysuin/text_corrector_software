@@ -29,6 +29,15 @@ from text_corrector_data_readers import MovieDialogReader, PTBDataReader
 
 from text_corrector_models import TextCorrectorModel
 
+####Delete all flags before declare#####
+def del_all_flags(FLAGS):
+    flags_dict = FLAGS._flags()    
+    keys_list = [keys for keys in flags_dict]    
+    for keys in keys_list:
+        FLAGS.__delattr__(keys)
+
+del_all_flags(tf.flags.FLAGS)
+
 tf.app.flags.DEFINE_string("config", "TestConfig", "Name of config to use.")
 tf.app.flags.DEFINE_string("data_reader_type", "MovieDialogReader",
                            "Type of data reader to use.")
