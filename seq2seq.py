@@ -73,10 +73,11 @@ from tensorflow.python.ops import rnn
 from tensorflow.python.ops import rnn_cell
 from tensorflow.python.ops import variable_scope
 from tensorflow.python.util import nest
+from tensorflow.contrib.rnn.python.ops import core_rnn_cell
 
 # TODO(ebrevdo): Remove once _linear is fully deprecated.
-linear = rnn_cell._linear  # pylint: disable=protected-access
-
+#linear = rnn_cell._linear  # pylint: disable=protected-access
+linear = core_rnn_cell._linear
 
 def _extract_argmax_and_embed(embedding, output_projection=None,
                               update_embedding=True):
